@@ -1,0 +1,240 @@
+.head{
+    padding:5px 15px;
+    
+}
+
+.head a{
+    color:aliceblue;
+    
+}   
+
+.language, .sign-up-link{
+    border: 2px solid aliceblue;
+    border-radius:5px;
+    margin-left:5px;
+    margin-right:5px;
+}
+.head a[class~="home-link"]{
+    color:aliceblue;
+    margin-left:20px;
+    text-decoration: underline; 
+}
+
+.timer {
+       margin-left:220px;
+    display:inline-block;
+   border-radius:30px;
+   background-color: white;
+   padding:5px 10px;
+   }
+
+   .timer__part {
+    font-weight:bold;
+   }
+
+   .timer__btn {
+    margin-left:10px;
+    border-radius:50%;
+   border:none;
+   color:white;
+   cursor: pointer;
+}
+
+.timer__btn--start{
+    background-color:darkcyan;   
+    
+}
+.timer__btn--stop{
+    background-color:crimson;   
+}
+.timer__btn--reset{
+    background-color: darkorange;
+}
+
+
+
+  
+
+.definition-section{
+     padding-top: 35px;
+    padding-bottom: 60px;
+    padding-right:80px;
+     height:185px;
+     width:100%;
+     background-color: hsl(254, 78%, 19%);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+    }
+.title-words{
+    width:fit-content;
+    
+    margin-left: 100px;
+}
+
+
+    
+
+#title {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:aliceblue;
+}
+#title::after{
+    border:1px solid darkblue;
+    background-color: aliceblue;
+    color: darkblue;
+    height: 48px;
+    border-radius: 15px;
+    margin-left:40px;
+    content:"WP";
+    font-size: 45px;    
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+    
+    
+   
+span.title-words{
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:aliceblue;
+}
+
+.input-group{
+    border-radius: 15px;
+    width:450px;
+    height:20px;
+}
+
+
+#seperator {
+    margin-top: 0;
+    margin-bottom: 0;
+    width:100%;
+    height:0.2em;
+    background-color:  black;
+    border:0px solid  black ;
+}
+
+
+.left-side{
+    width:400px;
+    height:526px;
+    float:left;
+    border-right:2px solid black;
+    background-color:cadetblue;
+    overflow: hidden;
+}
+
+.left-side p:first-child{
+    margin-top: 40px;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    color: azure;
+}
+
+#word-of-the-day{
+    font-weight:300;
+    text-align: center;
+    color: azure;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+#explanation{
+    text-align: center;
+    color: azure;
+
+}
+
+.left-side img{
+    width: 400px;
+    height:300px;
+    border:1px solid black;
+}
+
+    
+
+
+.translator-section{
+    padding-top:35px;
+    padding-left: 100px;
+    padding-right:80px;
+    height:fit-content;
+    display: inline-block;
+    padding-bottom: 150px;
+    background-color:azure;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+    
+      .translators {
+        
+        margin-top:15px;
+        margin-bottom: 15px;;
+        border-radius:20px;
+        border:2px solid black;
+    }
+    
+    
+footer{
+    display: flex;
+    flex-direction: row;
+    margin-top:-300px;
+    justify-content: space-around;
+    background-color:hsl(254, 78%, 19%);
+    width:100%;
+    height:220px;
+    color: aliceblue;
+   align-items: center;
+}
+footer li{
+    width:fit-content;
+   margin-top:13px;
+}
+
+footer ol{
+    list-style-type: none;
+}
+
+.references{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+footer pre{
+    
+    font-size: 33px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: azure;
+    font-weight: 200;
+    
+} 
+
+
+
+footer img:hover{
+    box-shadow: 0 0 15px white;
+    
+}
+
+.icons i{
+    margin:10px 10px 30px 10px;
+}
+
+footer li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-shadow: 0 0 10px azure;
+} 
+ 

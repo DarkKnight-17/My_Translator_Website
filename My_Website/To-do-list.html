@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WordPlus</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://libs.cdnjs.net/font-awesome/6.4.2/css/all.css">
+        <link rel="stylesheet" href="./CSS/to-do-styles.css">
+        <link rel="icon" href="./images/favicon-16x16.png" type="image/png">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="./scripts/script.js"></script>
+      </head>
+       
+
+  <body>
+  
+    <main>
+        <nav class="navbar navbar-expand-lg bg-primary ">
+            <div class="container-fluid head">
+              <a class="navbar-brand" href="#">
+                <img src="./images/favicon-32x32.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                WordPlus Dictionary 
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse " id="nav">
+                <ul class="navbar-nav align-items-center">
+                  <li class="nav-item">
+                    <a class="nav-link"  href="">Grammar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"  href="">Thesaurus</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link"  href="">Idioms</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"  href="./To-do-list.html">Your schedule</a>
+                </li>
+                    <li class="nav-item">
+                      <a class="nav-link  home-link "  href="./WordPlus.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./Topics_page.html">Topics</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle language" href="#" role="button" data-bs-toggle="dropdown">
+                      Language
+                    </a>
+                    <ul class="dropdown-menu bg-primary">
+                      <li><a class="dropdown-item" href="#">English</a></li>
+                      <li><a class="dropdown-item" href="#">Kazakh</a></li>
+                      <li><a class="dropdown-item" href="#">Russian</a></li>
+                    </ul>
+                  </li>
+                 
+                  <li class="nav-item sign-up-link">
+                    <a class="nav-link" href="./sign-up-page.html">Sign Up</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <div class="tasks-section">
+         <h1>Your learning schedule</h1>
+         <h4>Record what you learn daily and stay consistent!</h4>
+         <form>
+            
+            <input  class="form-control form-control-md"placeholder="Enter a new task" type="text" id="task-input" name="task-input">
+            <button class="btn btn-success">Add task</button>
+         </form>
+
+         <ul class="list-group" id="task-list"></ul>
+
+        </div>
+    </main>
+   
+
+    <script>
+
+
+      // This script allows a user to add, delete , mark tasks as complete in the To-do-list page  
+
+        const form = document.querySelector("form");
+        const taskList = document.querySelector("#task-list");
+
+const addTask = (task) => {
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `<input class="btn btn-outline-light" type="button" value="Undone"><li class=" list-group-item task-item">${task}</li><button class="btn btn-secondary" >Delete</button>`;
+    listItem.style.width = "100%";
+    listItem.style.display = "flex";
+    listItem.style.marginBottom = "15px";
+    listItem.style.gap = "10px";
+
+    taskList.appendChild(listItem);
+}
+
+
+    form.addEventListener('submit', (event) => {
+
+
+        event.preventDefault();
+        const input = document.querySelector('#task-input');
+        const task = input.value;
+        if(task == ""){
+            alert("Empty field can not be added");
+            return false;
+           }
+          
+        addTask(task);
+        input.value='';
+    });
+       
+
+    taskList.addEventListener('click', (event) => {
+        if(event.target.tagName === "BUTTON"){
+           
+           
+            
+            const listItem = event.target.parentElement;
+            taskList.removeChild(listItem);
+           
+        }
+        else if (event.target.tagName === "INPUT"){
+           
+            const done = event.target;
+        if(done.value == "Undone"){
+            done.value = "Done"
+            done.classList.remove("btn-outline-light");
+            done.classList.add("btn-primary");
+        }
+           else{
+                done.value = "Undone";
+                done.classList.remove("btn-primary");
+                done.classList.add("btn-outline-light");
+              
+            } 
+          }
+    });
+    </script>
+  </body>
+
+</html>

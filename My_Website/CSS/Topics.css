@@ -1,0 +1,105 @@
+
+
+.navbar-brand, .nav-link{
+    color:aliceblue;
+}
+
+
+.sign-up-link{
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+    color:black;
+    margin-left:800px;
+}
+
+.container{
+    background-color:cadetblue;
+    margin-bottom: 20px;
+    width: 60%;
+    display: inline-block;
+}
+.header{
+    margin-bottom: 0;
+    color:whitesmoke;
+}
+
+.card:hover{
+     border:2px solid orange;
+}
+.card-title{
+    text-align: center;
+}
+
+.accordion{
+    width:35%;
+    float:left;
+    margin-right:20px;
+}
+
+.list-group{
+    width:35%;
+    position:relative;
+    top:-225px;
+}
+
+.mini-heading{
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    height:40px;
+    background-color: cornflowerblue;
+    color:aliceblue;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: row;
+    margin-top:-220px;
+    justify-content: space-around;
+    background-color:hsl(254, 78%, 19%);
+    width:100%;
+    height:220px;
+    color: aliceblue;
+   align-items: center;
+}
+footer li{
+    width:fit-content;
+   margin-top:13px;
+}
+
+footer ol{
+    list-style-type: none;
+}
+
+.references{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+footer pre{
+    
+    font-size: 33px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: azure;
+    font-weight: 200;
+    
+} 
+
+.icons i{
+    margin:10px 10px 30px 10px;
+}
+
+footer img:hover{
+    box-shadow: 0 0 15px white;
+    
+}
+
+footer li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-shadow: 0 0 10px azure;
+} 
