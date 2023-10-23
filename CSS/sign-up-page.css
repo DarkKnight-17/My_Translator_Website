@@ -1,0 +1,89 @@
+*{
+   box-sizing:border-box;
+}
+
+
+.navbar-brand, .nav-link{
+    color:aliceblue;
+}
+
+
+
+.sign-up-link{
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+    
+    margin-left:800px;
+}
+
+.sign-up-link a{
+    color:aliceblue;
+    text-decoration: underline;
+}
+
+
+#carouselExampleCaptions{
+    width:fit-content;
+    height: fit-content;
+    margin-left:-12px;    
+}
+
+.container{
+    margin:70px auto 50px auto;
+    background-color:deepskyblue;
+    
+}
+
+
+.carousel-item img{
+   width:400px;
+   height:450px;
+   filter: brightness(0.7);
+}
+.heading, .hasAccount{
+    text-align:center;
+    color:aliceblue;
+
+}
+.hasAccount{
+    margin-top:30px;
+}
+.heading{
+    margin:30px auto 40px auto;
+}
+.btn[type="submit"]{
+    margin-top:20px;
+    margin-left:50px;
+    
+}
+.exit-button{
+    margin-top: 20px;
+    margin-left: 80px;
+}
+form{
+    width:80%;
+    height:fit-content;
+    margin-left:auto;
+    margin-right:auto;
+}
+.form-control{
+    width:100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.carousel-caption{
+    top:160px;
+    color:#fff;
+}
+    
+  
+
+
+
+
+
+
+
+
+

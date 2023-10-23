@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+}
+
+.head{
+    padding:5px 15px;
+    
+}
+
+.head a{
+    color:aliceblue;
+    
+}   
+
+.language, .sign-up-link{
+    border: 2px solid aliceblue;
+    border-radius:5px;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+.head a[class~="home-link"]{
+    margin-left:410px;
+    color:aliceblue;
+    text-decoration: underline; 
+   }
+
+.tasks-section{
+    background-color:cadetblue;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    width:60%;
+    min-height:500px;
+    height:fit-content;
+     color: aliceblue;
+    margin:50px auto 50px auto; 
+}
+
+h1,h4 {
+    margin:10px auto;
+}
+
+.task-item{
+    width:70%;
+
+    
+}
+
+
+form{
+    padding:20px auto;
+    width: 80%;
+    display: flex;
+    height: 45px;
+    gap:15px;
+    margin:40px auto 15px auto;
+}
+#task-input{
+  width:80%;
+  
+}
+
+
+#task-list{
+     list-style-type:none;
+    width:80%;     
+}
+
