@@ -9,8 +9,13 @@
 
 .head a{
     color:aliceblue;
-    
 }   
+
+a[href="./To-do-list.html"]{
+    color: black;
+    text-decoration: underline;
+}
+    
 
 .language, .sign-up-link{
     border: 2px solid aliceblue;
@@ -22,7 +27,7 @@
 .head a[class~="home-link"]{
     margin-left:360px;
     color:aliceblue;
-    text-decoration: underline; 
+    
    }
 
 .tasks-section{

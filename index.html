@@ -28,7 +28,7 @@
               <div class="collapse navbar-collapse " id="nav">
                 <ul class="navbar-nav align-items-center">
                   <li class="nav-item">
-                    <a class="nav-link"  href="">Grammar</a>
+                    <a class="nav-link"  href="./Grammar.html">Grammar</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link"  href="">Thesaurus</a>
@@ -108,7 +108,9 @@
                 <p>Type in your text and click the <b>Translate</b> button</p>
         
                 <textarea  id="first_text" class="form-control translators" type="text" rows="4"  placeholder="Write down your text..."></textarea>
+                <button class="clear-button"><i class="fa-solid fa-xmark fa-sm" style="color: #5c5c5e;"></i></button>
                 <button id = "translate_btn" class="btn btn-info" type="submit">Translate</button>
+                <p id="wait_message"></p>
                 <textarea  id="second_text" class="form-control translators" type="text" rows="4" placeholder="You will see the translation" disabled></textarea>
             </span>
         </main>
@@ -152,7 +154,7 @@ Dictionary</pre>
 
         </footer>
 
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
         <script src="./scripts/script.js"></script>
         
     </body>

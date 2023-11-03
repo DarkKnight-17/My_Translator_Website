@@ -166,26 +166,61 @@ span.title-words{
     padding-top:35px;
     padding-left: 100px;
     padding-right:80px;
+    padding-bottom: 50px;
     height:fit-content;
     display: inline-block;
-    padding-bottom: 150px;
     background-color:azure;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
     justify-content: space-between;
+    position:relative;
+    
 }
     
-      .translators {
+.translators {
         
         margin-top:15px;
         margin-bottom: 15px;;
         border-radius:20px;
         border:2px solid black;
-    }
+}
+
+.clear-button{
+        position:absolute;
+        scale: 1.7;
+        top: 180px;
+       
+        display: none;
+        right: 110px;
+        border:none;
+        background-color: white;
+}
+
+#wait_message{
+    
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top:300px;
+    left: 200px;
+    color:mediumblue;
+}
+
+.counter_container{
+    position: absolute;
+    right: 110px;
+    top:240px;
+
+    color: grey;
+}
+
+        
+        
     
     
 footer{
+    
     display: flex;
     flex-direction: row;
     margin-top:-300px;

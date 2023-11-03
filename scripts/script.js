@@ -2,14 +2,14 @@
 // This is the function for processing the definition form 
 
 function validate_definition_form() {
-    let word = document.forms["definition_form"]["word"].value;
-    if (word == ""){
+  let word = document.forms["definition_form"]["word"].value;
+  if (word == ""){
         alert("Please, enter a word or phrase");
         return false;
-    }else {
+      }else {
         alert("Unfortunately, the word wasn't found");
         return false;
-    }
+      }
 }
 
 // Below is the code for interacting with the user while the text is being translated 
@@ -17,18 +17,63 @@ function validate_definition_form() {
 let translate_btn = document.getElementById("translate_btn");
 let first_text = document.getElementById("first_text");
 let second_text = document.getElementById("second_text");
+let clear_btn = document.querySelector(".clear-button");
+
+
+clear_btn.onclick = function(){
+  first_text.value = "";
+}
+
+function check_content() {
+  if($("#first_text").val() !== ""){
+    $(".clear-button").show();
+  }
+  else {
+    $(".clear-button").hide();
+    
+  }
+}
+
+let counter_container = document.createElement("span");
+document.querySelector(".translator-section").appendChild(counter_container);
+counter_container.textContent = "0 / 2000";
+counter_container.classList.add("counter_container");
+
+let symbols;
+
+first_text.addEventListener("keyup", () => {
+ check_content();
+  symbols = first_text.value.length;  
+ counter_container.textContent = symbols + " / 2000";
+});
+
+$("#first_text").keydown(function() {
+  symbols = first_text.value.length;  
+ counter_container.textContent = symbols + " / 2000";
+})
+
+ 
+
 
 first_text.addEventListener('focusin', () => {
-  first_text.placeholder = "Write down your text";
+  
+  check_content();
+  document.querySelector("#wait_message").textContent = "";
+  
+  
   first_text.style.boxShadow = "none";
-  second_text.placeholder = "Processing your text...";
+ 
   
 });
 first_text.addEventListener('focusout', () => {
-
-  second_text.placeholder = "You will see the translation";
+  check_content();
+  document.querySelector("#wait_message").textContent = "";
+  
+  
+ 
   
 });
+
 
 
 translate_btn.addEventListener('click', () => {
@@ -40,11 +85,17 @@ translate_btn.addEventListener('click', () => {
   }
   
   else {
-    second_text.placeholder = "You will see the translation";
+    document.querySelector("#wait_message").textContent = "Please, wait a few seconds...";
+    second_text.placeholder = "You will see the translation...";
     
   }
   
-})
+});
+  
+
+
+
+
 
 /* The following code is used in Sign-up page for dealing with the user data
 and identifying the validity
@@ -108,7 +159,6 @@ let control= document.querySelector(".timer__btn--control");
 let  reset= document.querySelector(".timer__btn--reset");
 
   
-      
       
       
    
