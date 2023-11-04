@@ -28,7 +28,7 @@
               <div class="collapse navbar-collapse " id="nav">
                 <ul class="navbar-nav align-items-center">
                   <li class="nav-item">
-                    <a class="nav-link"  href="./Grammar.html">Grammar</a>
+                    <a class="nav-link"  href="./Quiz.html">Quiz</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link"  href="">Thesaurus</a>
@@ -106,7 +106,11 @@
             <h3><strong>Translator</strong></h3>
             <h4>Get a quick, free translation!</h4>
                 <p>Type in your text and click the <b>Translate</b> button</p>
-        
+                 <button class="history"><i class="fa-regular fa-clock fa-sm"></i></button>
+                 <button class="favourites"><i class="fa-regular fa-star fa-sm"></i></button>
+                 <span class="message-history">Your previous translations are saved in history!</span>
+                 <span class="message-favourites">You can store favourite words seperately!</span>
+
                 <textarea  id="first_text" class="form-control translators" type="text" rows="4"  placeholder="Write down your text..."></textarea>
                 <button class="clear-button"><i class="fa-solid fa-xmark fa-sm" style="color: #5c5c5e;"></i></button>
                 <button id = "translate_btn" class="btn btn-info" type="submit">Translate</button>

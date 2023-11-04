@@ -12,6 +12,32 @@ function validate_definition_form() {
       }
 }
 
+
+
+$(".history").mouseenter( function() { 
+  $(".message-history").fadeTo(1200,1.0 );
+});
+
+$(".history").mouseleave( function(){
+  $(".message-history").fadeTo(1000, 0);
+
+}); 
+
+$(".favourites").mouseenter(function() { 
+  $(".message-favourites").fadeTo(1200, 1.0);
+});
+
+$(".favourites").mouseleave(  function(){
+  $(".message-favourites").fadeTo(1000, 0);
+
+}); 
+  
+
+
+
+
+
+
 // Below is the code for interacting with the user while the text is being translated 
 
 let translate_btn = document.getElementById("translate_btn");
@@ -69,10 +95,10 @@ first_text.addEventListener('focusout', () => {
   check_content();
   document.querySelector("#wait_message").textContent = "";
   
+});
   
  
   
-});
 
 
 
