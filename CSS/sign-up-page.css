@@ -31,14 +31,16 @@
 .container{
     margin:70px auto 50px auto;
     background-color:deepskyblue;
-    
+    border-radius: 20px;
 }
 
 
 .carousel-item img{
-   width:400px;
-   height:450px;
-   filter: brightness(0.7);
+    width:400px;
+    height:450px;
+    filter: brightness(0.7);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 .heading, .hasAccount{
     text-align:center;
@@ -79,7 +81,60 @@ form{
     
   
 
+footer{
+    
+    display: flex;
+    flex-direction: row;
+    margin-top:160px;
+    justify-content: space-around;
+    background-color:hsl(254, 78%, 19%);
+    width:100%;
+    height:220px;
+    color: aliceblue;
+   align-items: center;
+}
+footer li{
+    width:fit-content;
+   margin-top:13px;
+}
 
+footer ol{
+    list-style-type: none;
+}
+
+.references{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+footer pre{
+    
+    font-size: 33px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: azure;
+    font-weight: 200;
+    
+} 
+
+
+
+footer img:hover{
+    box-shadow: 0 0 15px white;
+    
+}
+
+.icons i{
+    margin:10px 10px 30px 10px;
+}
+
+footer li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-shadow: 0 0 10px azure;
+} 
+ 
 
 
 

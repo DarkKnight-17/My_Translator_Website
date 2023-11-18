@@ -2,6 +2,20 @@
     box-sizing: border-box;
 }
 
+.background_video{
+    min-height: 100%;
+    min-width: 100%;
+    position:fixed;
+    z-index: -1;
+    bottom: 0;
+    right:0;
+
+}
+
+.navbar , .tasks-section{
+    opacity: 0.8;
+}
+
 .head{
     padding:5px 15px;
     
@@ -31,27 +45,30 @@ a[href="./To-do-list.html"]{
    }
 
 .tasks-section{
-    background-color:cadetblue;
+    background-color:darkturquoise;
     display:flex;
     flex-direction: column;
     align-items: center;
     gap:20px;
-    width:60%;
+    width:70%;
     min-height:500px;
     height:fit-content;
-     color: aliceblue;
+     color:white;
     margin:50px auto 50px auto; 
+    border-radius: 20px;
 }
 
 h1,h4 {
     margin:10px auto;
+    
 }
 
 .task-item{
     width:70%;
-
+    
     
 }
+
 
 
 form{
@@ -73,3 +90,57 @@ form{
     width:80%;     
 }
 
+footer{
+    opacity: 0.95;
+    display: flex;
+    flex-direction: row;
+    margin-top:250px;
+    justify-content: space-around;
+    background-color:hsla(254, 100%, 31%);
+    width:100%;
+    height:220px;
+    color: aliceblue;
+   align-items: center;
+}
+footer li{
+    width:fit-content;
+   margin-top:13px;
+}
+
+footer ol{
+    list-style-type: none;
+}
+
+.references{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+footer pre{
+    
+    font-size: 33px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: azure;
+    font-weight: 200;
+    
+} 
+
+
+
+footer img:hover{
+    box-shadow: 0 0 15px white;
+    
+}
+
+.icons i{
+    margin:10px 10px 30px 10px;
+}
+
+footer li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-shadow: 0 0 10px azure;
+} 
+ 
