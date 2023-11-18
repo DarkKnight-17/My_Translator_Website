@@ -117,6 +117,28 @@ translate_btn.addEventListener('click', () => {
   }
   
 });
+
+// The following code handles the scroll_to_Top button
+
+
+
+let toTop_Btn = document.getElementById("toTop_Btn");
+
+window.onscroll = function(){
+  if(document.body.scrollTop > 45 || document.documentElement.scrollTop > 45){
+  toTop_Btn.style.display = "block";
+}
+else {
+  toTop_Btn.style.display = "none";
+  
+  }
+
+}
+
+function scrollToTop(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
   
 
 
