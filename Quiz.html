@@ -67,16 +67,42 @@
           </nav>
 
 
+          <img class="back_image" src="./images/quiz.-2.jpg" alt="questions">
+
+
+          <div id="myModal" class="modal">
+
+            
+            <div class="modal-content">
+              <button type="button" class="close"><i class="fa-solid fa-xmark fa-xl" style="color: #5c5c5e;"></i></button>
+              <p id="feedback"></p>
+               <div>
+
+                <button type="button" id="review_btn" class="review">Review</button>
+                <button type="button" id="startAgain"  class="start_again">Start again</button>
+               </div> 
+
+            </div>
+          
+          </div>
+
+
           <div class="box">
          <h1>Let's test your English language  
           <div class="progress">
-            <p>5 questions</p>
+            <p></p>
             <span class="outer"><span class="filler"></span></span>
            </div>
          </h1>
+         <div id="user_answers" >
+        </div>
+           
+            
+          
+
           <div class="quiz">
             <h2 id="question" class="show_hide">Question goes here</h2>
-            <button id="start" onclick="startQuiz()">Start the Quiz</button>
+            <button type="button" id="start" onclick="startQuiz()">Start the Quiz</button>
             <div id="answer-buttons">
                <button class="btn"></button>
                <button class="btn"></button>

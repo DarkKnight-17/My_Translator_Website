@@ -145,52 +145,7 @@ function scrollToTop(){
 
 
 
-/* The following code is used in Sign-up page for dealing with the user data
-and identifying the validity
-*/
 
-function validate_register_form(two_fields){
-      let email_field = two_fields["user_email"].value;
-      let password_field = two_fields["user_password"].value;
-      var message = "";
-      
-      let test1 = /[a-z]/;
-      let test2 = /[0-9]/;
-      let test3 = /[A-Z]/;
-      if(email_field == "" || password_field== ""){
-        message  =  "Both fields must be filled!"; 
-    
-      }
-
-    else if(!test1.test(password_field)){
-        message = "Your password should contain at least 1 lowercase letter";
-        
-        
-        
-    }
-    else if (!test2.test(password_field)){
-        
-        message = "Your password should contain at least 1 digit";
-    }
-    else if (!test3.test(password_field)){
-        message = "Your password should contain at least 1 uppercase letter";
-        
-    }
-    else if(password_field.length < 8){
-      message = "Your password should be at least 8 characters long";
-    }
-        if (message == ""){
-            alert("Well done! Your account has just been created!");
-           document.querySelector(".sign-up-link").innerHTML = `<a class="nav-link" href="./sign-up-page.html">${email_field}</a>`
-           two_fields["user_email"].value  = '';
-           two_fields["user_password"].value = ''; 
-           return false;
-        }
-        else {
-            alert(message);
-            return false;
-        }
-}
 
 
 /* This is last past which allows a user to set the timer 

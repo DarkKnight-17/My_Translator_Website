@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 .background_video{
     min-height: 100%;
     min-width: 100%;
@@ -38,11 +39,14 @@ a[href="./To-do-list.html"]{
     margin-right:5px;
 }
 
-.head a[class~="home-link"]{
-    margin-left:360px;
-    color:aliceblue;
+.head li:nth-of-type(5){
     
-   }
+    margin-left: 360px;
+    
+    
+}
+
+
 
 .tasks-section{
     background-color:darkturquoise;

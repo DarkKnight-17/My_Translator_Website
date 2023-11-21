@@ -48,8 +48,64 @@ const questions  = [
             {text: "splurge on", correct: false}
         ]
 
+    },
+    {
+        question: "How many tenses are there in English?",
+        answers: [
+            {text: "10", correct:  false},
+            {text: "12", correct: true},
+            {text: "9", correct: false},
+            {text: "14", correct: false}
+        ]
+
+    },
+    {
+        question: "Pick the INCORRECT sentence",
+        answers: [
+            {text: "You would rather to purchase a new laptop, wouldn't you?", correct:  true},
+            {text: "Having spent much time, we were able to get our car working", correct: false},
+            {text: "I wish they would have give him a second chance", correct: false},
+            {text: "She will go out with her friends once she has finished her homework", correct: false}
+        ]
+
+    },
+    {
+        question: "Which of the following idioms means to spend less money than usual?",
+        answers: [
+            {text: "be broke", correct:  false},
+            {text: "make a fortune", correct: false},
+            {text: "make ends meet", correct: false},
+            {text: "tighten one's belt", correct: true}
+        ]
+
+    },
+    {
+        question: "Which grammar is used to express regret?",
+        answers: [
+            {text: "I wish", correct:  true},
+            {text: "would rather", correct: false},
+            {text: "get used to", correct: false},
+            {text: "used to", correct: false}
+        ]
+
+    },
+    {
+        question: "The synonym of the word 'demanding'?",
+        answers: [
+            {text: "pisky", correct:  false},
+            {text: "strenuous", correct: true},
+            {text: "perplexing", correct: false},
+            {text: "nifty", correct: false}
+        ]
+
     }
 ];
+
+let data_holder = [];
+
+
+
+
 let wrong_answer = new Audio("./audio/zapsplat_multimedia_gameshow_buzzer_incorrect_buzz_low_pitched_001_91600.mp3");
 let correct_answer = new Audio("./audio/zapsplat_multimedia_gameshow_correct_answer_bell_ping_chime_003_91612.mp3")
 
@@ -59,13 +115,49 @@ let answerButtons = document.getElementById("answer-buttons")
 let nextButton = document.getElementById("next-btn")
 let start_button = document.getElementById("start")
 
+let user_answers = document.getElementById("user_answers");
 
 let currentQuestionIndex = 0;
 let score = 0;
 
+document.querySelector(".progress").firstChild.textContent = `${questions.length} questions`
+
+let modal = document.getElementById("myModal");
+let start_again =  document.getElementById("startAgain");
+let review = document.getElementById("review_btn");
+let btn_close = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+
+start_again.onclick = function(){
+    modal.style.display = "none";
+    progress.style.width = "0px"
+    startQuiz();
+}
+
+review.onclick = function(){
+    modal.style.display = "none";
+    user_answers.style.display = "block";
+    questionElement.style.display = "none";
+    nextButton.style.display = "none";
+}
+
+
+btn_close.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+    }
+}
+
 
 
 function startQuiz(){
+    
     questionElement.classList.remove("show_hide")
     answerButtons.style.display = "block";
     start_button.style.display = "none";
@@ -74,6 +166,8 @@ function startQuiz(){
     nextButton.textContent = "Next"
     showQuestion();
 }
+
+
 
 
 function fill_progress(){
@@ -85,7 +179,7 @@ function fill_progress(){
    
    function fill(){
     
-        if(progress_tracker == 50 || progress.style.width === "248px"){
+        if(progress_tracker == 25 || progress.style.width === "248px"){
           clearInterval(interval);
         }
         else{
@@ -101,22 +195,36 @@ function fill_progress(){
    
 }
 
+
 function showQuestion(){
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.textContent = questionNo + ". " + currentQuestion.question;
-
+    
+    
     currentQuestion.answers.forEach(answer => {
+
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("btn");
         answerButtons.appendChild(button);
+        
+        
+        
+        
         if(answer.correct){
             button.dataset.correct = answer.correct;
         }
         button.addEventListener("click", selectAnswer);
     });
+
+    // let review_question = questionElement.cloneNode(true);
+    // let review_buttons = answerButtons.cloneNode(true);
+    // review_buttons.classList.add("review-answer-buttons");
+    // user_answers.appendChild(review_question);
+    // user_answers.appendChild(review_buttons);   
+    
 }
 
 function resetState(){
@@ -162,6 +270,18 @@ function handleNextButton(){
         showQuestion();
     }else{
         showScore();
+        if(score >= 8){
+            document.getElementById("feedback").textContent = `Amazing result! You scored ${score} out of ${questions.length}!`;
+        }
+        else if(score >= 5){
+            document.getElementById("feedback").textContent = `Not bad, You score is ${score}. Keep learning!`;
+        }
+        else{
+            
+            document.getElementById("feedback").textContent = `You score is ${score}. Don't get upset! You can get better`;
+        }
+        modal.style.display = "block";
+
     }
 }
 
@@ -170,12 +290,19 @@ nextButton.addEventListener("click", ()=>{
     if(currentQuestionIndex < questions.length){
         fill_progress();
         handleNextButton();
+        
     }
     else{
         progress.style.width = "0px";
+        
         startQuiz();
+        
     }
 })
+
+
+
+
 
 
 

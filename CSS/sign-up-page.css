@@ -48,31 +48,80 @@
 
 }
 .hasAccount{
-    margin-top:30px;
+    margin-top:5px;
 }
 .heading{
-    margin:30px auto 40px auto;
+    margin:30px auto 5px auto;
 }
-.btn[type="submit"]{
-    margin-top:20px;
-    margin-left:50px;
+
+
+
+#regForm {
+    color:#ffdddd;
+    margin: 5px auto;
     
-}
-.exit-button{
+    padding: 10px;
+    width: 80%;
+    min-width: 200px;
+  }
+  
+  .exit-button{
+      margin-top: 10px;
+      
+  }
+  
+  b {
+      font-size: 1.3em;
+  }
+  input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
     margin-top: 20px;
-    margin-left: 80px;
-}
-form{
-    width:80%;
-    height:fit-content;
-    margin-left:auto;
-    margin-right:auto;
-}
-.form-control{
-    width:100%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+    border: 1px solid #aaaaaa;
+  }
+  #prevBtn{
+    display: none;
+  }
+  
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+    background-color: #ffdddd;
+  }
+  
+  /* Hide all steps by default: */
+  .tab:first-of-type {
+    display: block;
+  }
+  .tab{
+    display: none;
+  }
+  
+  
+  
+  
+  
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #414141;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  .step.active {
+      
+      background-color: #efecec;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: rgba(8, 156, 0, 0.729);
+  }
 
 .carousel-caption{
     top:160px;
